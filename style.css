@@ -117,7 +117,7 @@ nav a:hover {
 }
 
 /* =============================
-   MOBILE NAVIGATION (HAMBURGER)
+   HAMBURGER MENU
 ============================= */
 .hamburger {
   display: none;
@@ -134,6 +134,7 @@ nav a:hover {
 }
 
 nav.mobile-active {
+  display: flex !important;
   flex-direction: column;
   position: absolute;
   top: 70px;
@@ -142,10 +143,11 @@ nav.mobile-active {
   background: #fff;
   border-top: 1px solid #eee;
   padding: 20px 0;
+  z-index: 1500;
 }
 
 nav.mobile-active a {
-  margin: 15px 0;
+  margin: 15px 20px;
 }
 
 /* =============================
@@ -322,8 +324,7 @@ nav.mobile-active a {
   }
 
   nav {
-    display: none;
-    width: 100%;
+    display: none; /* hide desktop nav */
   }
 
   .hamburger {
@@ -340,6 +341,10 @@ nav.mobile-active a {
 
   .page-title {
     margin-bottom: 40px;
+  }
+
+  .submenu {
+    display: none !important; /* hide dropdowns by default on mobile */
   }
 }
 
