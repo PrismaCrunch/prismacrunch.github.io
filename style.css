@@ -96,6 +96,7 @@ nav a:hover {
   transform: translateY(10px);
   transition: all 0.3s ease;
   box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+  z-index: 1500;
 }
 
 .submenu a {
@@ -113,6 +114,38 @@ nav a:hover {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
+}
+
+/* =============================
+   MOBILE NAVIGATION (HAMBURGER)
+============================= */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background: #111;
+  transition: all 0.3s ease;
+}
+
+nav.mobile-active {
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border-top: 1px solid #eee;
+  padding: 20px 0;
+}
+
+nav.mobile-active a {
+  margin: 15px 0;
 }
 
 /* =============================
@@ -142,6 +175,7 @@ nav a:hover {
 .hero img:hover {
   transform: scale(1.02);
 }
+
 /* =============================
    HERO DOUBLE IMAGES
 ============================= */
@@ -149,12 +183,12 @@ nav a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px; /* space between the images */
-  flex-wrap: wrap; /* wrap on smaller screens */
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .hero.hero-double img {
-  max-width: 48%; /* roughly half each image */
+  max-width: 48%;
   border: 1px solid #eee;
   transition: transform 1s ease;
 }
@@ -219,6 +253,7 @@ nav a:hover {
 .modal.open img {
   transform: scale(1);
 }
+
 /* =============================
    ABOUT PAGE
 ============================= */
@@ -268,16 +303,61 @@ nav a:hover {
 /* =============================
    RESPONSIVE
 ============================= */
+@media (max-width: 1024px) {
+  .container {
+    padding: 80px 30px;
+  }
+  .hero.hero-double img {
+    max-width: 48%;
+  }
+}
+
 @media (max-width: 768px) {
   header {
-    padding: 25px 30px;
+    padding: 20px 30px;
   }
 
   .container {
-    padding: 70px 30px;
+    padding: 60px 20px;
+  }
+
+  nav {
+    display: none;
+    width: 100%;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .hero.hero-double img {
+    max-width: 100%;
+  }
+
+  .gallery {
+    gap: 30px;
+  }
+
+  .page-title {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 18px;
   }
 
   nav a {
-    margin-left: 20px;
+    font-size: 12px;
+    margin: 10px 0;
+  }
+
+  .section {
+    margin-top: 50px;
+  }
+
+  .entry, .artist-description {
+    font-size: 13px;
   }
 }
