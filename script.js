@@ -76,7 +76,7 @@ document.querySelectorAll(".dropdown > a").forEach(drop => {
 // =========================
 // ✅ PDF MODAL (NEW)
 // =========================
-function openPDF(impressum.pdf) {
+function openPDF(file) {
   const modal = document.getElementById("pdfModal");
   const frame = document.getElementById("pdfFrame");
 
