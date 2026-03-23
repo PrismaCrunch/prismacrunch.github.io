@@ -3,6 +3,7 @@ window.addEventListener("load", () => {
   document.body.classList.add("loaded");
 });
 
+
 // Smooth Fade Out Navigation
 document.querySelectorAll("a").forEach(link => {
   if (link.hostname === window.location.hostname) {
@@ -18,7 +19,10 @@ document.querySelectorAll("a").forEach(link => {
   }
 });
 
-// Modal Setup
+
+// =========================
+// IMAGE MODAL (your gallery)
+// =========================
 const modal = document.createElement("div");
 modal.classList.add("modal");
 document.body.appendChild(modal);
@@ -38,18 +42,23 @@ document.querySelectorAll(".gallery img, .hero img").forEach(img => {
   });
 });
 
-// Mobile Hamburger toggle
+
+// =========================
+// MOBILE NAVIGATION
+// =========================
 const hamburger = document.getElementById("hamburger");
 const nav = document.querySelector("nav");
 
 hamburger.addEventListener("click", () => {
   nav.classList.toggle("mobile-active");
+
   nav.querySelectorAll(".submenu").forEach(sub => {
     if (!nav.classList.contains("mobile-active")) {
       sub.style.display = "";
     }
   });
 });
+
 
 // Mobile dropdown toggle
 document.querySelectorAll(".dropdown > a").forEach(drop => {
@@ -61,4 +70,43 @@ document.querySelectorAll(".dropdown > a").forEach(drop => {
       submenu.style.flexDirection = "column";
     }
   });
+});
+
+
+// =========================
+// ✅ PDF MODAL (NEW)
+// =========================
+function openPDF(file) {
+  const modal = document.getElementById("pdfModal");
+  const frame = document.getElementById("pdfFrame");
+
+  frame.src = file;
+  modal.style.display = "block";
+  document.body.style.overflow = "hidden"; // prevent scroll
+}
+
+function closePDF() {
+  const modal = document.getElementById("pdfModal");
+  const frame = document.getElementById("pdfFrame");
+
+  frame.src = "";
+  modal.style.display = "none";
+  document.body.style.overflow = ""; // restore scroll
+}
+
+
+// Close PDF with ESC key
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    closePDF();
+  }
+});
+
+
+// Close when clicking outside content
+document.addEventListener("click", (e) => {
+  const modal = document.getElementById("pdfModal");
+  if (e.target === modal) {
+    closePDF();
+  }
 });
