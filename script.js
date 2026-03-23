@@ -30,6 +30,13 @@ const nav = document.querySelector("nav");
 
 hamburger.addEventListener("click", () => {
   nav.classList.toggle("mobile-active");
+
+  // also toggle visibility of submenus to prevent overlap
+  nav.querySelectorAll(".submenu").forEach(sub => {
+    if (!nav.classList.contains("mobile-active")) {
+      sub.style.display = ""; // reset on close
+    }
+  });
 });
 
 // Make dropdowns toggleable on mobile
