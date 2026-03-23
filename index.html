@@ -6,22 +6,28 @@
 <meta name="description" content="Philipp Alvaro – Berlin-based interdisciplinary artist. Home gallery of artworks.">
 <meta name="theme-color" content="#ffffff">
 <title>Home | Philipp Alvaro</title>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header>
   <h1>Philipp Alvaro</h1>
+
   <div class="hamburger" id="hamburger">
     <div></div>
     <div></div>
     <div></div>
   </div>
+
   <nav>
     <a href="index.html">Home</a>
+
     <div class="dropdown">
       <a href="portfolio.html">Portfolio</a>
       <div class="submenu">
@@ -31,6 +37,7 @@
         <a href="portfolio.html#u8haus">U8 Haus</a>
       </div>
     </div>
+
     <a href="about.html">About & Contact</a>
   </nav>
 </header>
@@ -40,6 +47,24 @@
   <img src="Scans Edited/Some shadows never leave.jpg" alt="Some Shadows Never Leave" loading="lazy">
 </main>
 
+
+<!-- ✅ LEGAL FOOTER -->
+<div class="legal-footer">
+  <button onclick="openPDF('imressum.pdf')">Impressum</button>
+  <button onclick="openPDF('datenschutzerklärung.pdf')">Datenschutzerklärung</button>
+</div>
+
+
+<!-- ✅ PDF MODAL -->
+<div id="pdfModal" class="pdf-modal">
+  <div class="pdf-content">
+    <span class="close" onclick="closePDF()">&times;</span>
+    <iframe id="pdfFrame" src=""></iframe>
+  </div>
+</div>
+
+
 <script src="script.js" defer></script>
+
 </body>
 </html>
