@@ -24,6 +24,26 @@ const modal = document.createElement("div");
 modal.classList.add("modal");
 document.body.appendChild(modal);
 
+// Mobile Hamburger toggle
+const hamburger = document.getElementById("hamburger");
+const nav = document.querySelector("nav");
+
+hamburger.addEventListener("click", () => {
+  nav.classList.toggle("mobile-active");
+});
+
+// Make dropdowns toggleable on mobile
+document.querySelectorAll(".dropdown > a").forEach(drop => {
+  drop.addEventListener("click", (e) => {
+    if (window.innerWidth <= 768) {
+      e.preventDefault(); // prevent link jump
+      const submenu = drop.nextElementSibling;
+      submenu.style.display = submenu.style.display === "flex" ? "none" : "flex";
+      submenu.style.flexDirection = "column";
+    }
+  });
+});
+
 // Close modal on click outside
 modal.addEventListener("click", () => {
   modal.classList.remove("open");
