@@ -260,33 +260,50 @@ nav.mobile-active a {
    ✅ LEGAL FOOTER (NEW)
 ============================= */
 .legal-footer {
-  position: fixed;
-  bottom: 8px;
-  width: 100%;
   text-align: center;
-  opacity: 0.35;
+  padding: 40px 0 20px;
   font-size: 11px;
-  z-index: 3000;
-  transition: opacity 0.3s ease;
-}
-
-.legal-footer:hover {
-  opacity: 0.7;
+  opacity: 0.5;
 }
 
 .legal-footer button {
   background: none;
   border: none;
   color: #777;
-  margin: 0 8px;
+  margin: 0 10px;
   cursor: pointer;
-  font-family: inherit;
   font-size: 11px;
-  letter-spacing: 1px;
 }
 
 .legal-footer button:hover {
   color: #000;
+}
+
+.pdf-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+}
+
+.pdf-content {
+  width: 85%;
+  height: 85%;
+  margin: 4% auto;
+  background: white;
+}
+
+.pdf-content iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  cursor: pointer;
 }
 
 /* =============================
