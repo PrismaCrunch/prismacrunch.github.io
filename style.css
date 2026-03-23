@@ -221,7 +221,7 @@ nav.mobile-active a {
 }
 
 /* =============================
-   MODAL
+   MODAL (IMAGE)
 ============================= */
 .modal {
   position: fixed;
@@ -254,6 +254,74 @@ nav.mobile-active a {
 
 .modal.open img {
   transform: scale(1);
+}
+
+/* =============================
+   ✅ LEGAL FOOTER (NEW)
+============================= */
+.legal-footer {
+  position: fixed;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  opacity: 0.35;
+  font-size: 11px;
+  z-index: 3000;
+  transition: opacity 0.3s ease;
+}
+
+.legal-footer:hover {
+  opacity: 0.7;
+}
+
+.legal-footer button {
+  background: none;
+  border: none;
+  color: #777;
+  margin: 0 8px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.legal-footer button:hover {
+  color: #000;
+}
+
+/* =============================
+   ✅ PDF MODAL (NEW)
+============================= */
+.pdf-modal {
+  display: none;
+  position: fixed;
+  z-index: 4000;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+}
+
+.pdf-content {
+  position: relative;
+  width: 85%;
+  height: 85%;
+  margin: 4% auto;
+  background: #fff;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+}
+
+.pdf-content iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #333;
 }
 
 /* =============================
@@ -324,7 +392,7 @@ nav.mobile-active a {
   }
 
   nav {
-    display: none; /* hide desktop nav */
+    display: none;
   }
 
   .hamburger {
@@ -344,7 +412,7 @@ nav.mobile-active a {
   }
 
   .submenu {
-    display: none !important; /* hide dropdowns by default on mobile */
+    display: none !important;
   }
 }
 
