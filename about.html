@@ -81,21 +81,17 @@ Philipp Alvaro Klinnert is a Berlin-based interdisciplinary artist working acros
 </main>
 
 
-<!-- ✅ LEGAL FOOTER -->
-<div class="legal-footer">
-  <button onclick="openPDF('imressum.pdf')">Impressum</button>
-  <button onclick="openPDF('datenschutzerklärung.pdf')">Datenschutzerklärung</button>
-</div>
+<footer class="legal-footer">
+  <button onclick="openPDF('impressum.pdf')">Impressum</button>
+  <button onclick="openPDF('datenschutzerklaerung.pdf')">Datenschutzerklärung</button>
+</footer>
 
-
-<!-- ✅ PDF MODAL -->
 <div id="pdfModal" class="pdf-modal">
   <div class="pdf-content">
     <span class="close" onclick="closePDF()">&times;</span>
-    <iframe id="pdfFrame" src=""></iframe>
+    <iframe id="pdfFrame"></iframe>
   </div>
 </div>
-
 
 <script src="script.js" defer></script>
 
