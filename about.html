@@ -1,31 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Philipp Alvaro Klinnert – Berlin-based interdisciplinary artist. Resume, exhibitions, and contact.">
-<meta name="theme-color" content="#ffffff">
-<title>About | Philipp Alvaro</title>
+  <meta charset="UTF-8">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Mobile optimization -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="style.css">
+  <!-- SEO + browser safety -->
+  <meta name="description" content="Philipp Alvaro Klinnert – Berlin-based interdisciplinary artist. Resume, exhibitions, and contact.">
+  <meta name="theme-color" content="#ffffff">
+
+  <title>About | Philipp Alvaro</title>
+
+  <!-- Google Fonts (safe + performant) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header>
   <h1>Philipp Alvaro</h1>
 
-  <div class="hamburger" id="hamburger">
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
-
-  <nav>
+  <!-- Add mobile-friendly nav toggle (styled later in CSS/JS) -->
+  <nav id="navbar">
     <a href="index.html">Home</a>
 
     <div class="dropdown">
@@ -45,54 +46,49 @@
 
 <main class="container">
 
-<div class="page-title">Resume & Bio</div>
+  <div class="page-title">Resume & Bio</div>
 
-<div class="artist-name">Philipp Alvaro Klinnert</div>
-<div class="entry">Born 1999, Freiburg im Breisgau, Germany</div>
-<div class="entry">Lives and works in Berlin, Germany</div>
+  <div class="artist-name">Philipp Alvaro Klinnert</div>
+  <div class="entry">Born 1999, Freiburg im Breisgau, Germany</div>
+  <div class="entry">Lives and works in Berlin, Germany</div>
 
-<section class="section">
-  <div class="section-title">Education</div>
-  <div class="entry">2021–2024 — Certificate as Writer for Screen & Story, Filmarche e.V., Berlin</div>
-  <div class="entry">2013–2019 — Abitur, Nelson-Mandela-Schule, Berlin</div>
-  <div class="entry">2006–2013 — Deutsche-Schule-Managua, Nicaragua</div>
-  <div class="entry">2005–2006 — Lindenschule, Bad Breisig</div>
-</section>
+  <section class="section">
+    <div class="section-title">Education</div>
+    <div class="entry">2021–2024 — Certificate as Writer for Screen & Story, Filmarche e.V., Berlin</div>
+    <div class="entry">2013–2019 — Abitur, Nelson-Mandela-Schule, Berlin</div>
+    <div class="entry">2006–2013 — Deutsche-Schule-Managua, Nicaragua</div>
+    <div class="entry">2005–2006 — Lindenschule, Bad Breisig</div>
+  </section>
 
-<section class="section">
-  <div class="section-title">Exhibitions & Residencies</div>
-  <div class="entry">2022 — Pan y Arte Charity Day, Münster</div>
-  <div class="entry">2023 — Wedding Art-Market, Berlin</div>
-  <div class="entry">2023 — Teltower Kunst Sonntag, Teltow</div>
-  <div class="entry">2025 — Artist Residency, Centre d’Art, Auroville, India</div>
-  <div class="entry">2026 — UNO Gallery & Paper Positions Art Fair, Berlin</div>
-  <div class="entry">2026 — U8 Haus Group Exhibition, Neukölln, Berlin</div>
-</section>
+  <section class="section">
+    <div class="section-title">Exhibitions & Residencies</div>
+    <div class="entry">2022 — Pan y Arte Charity Day, Münster</div>
+    <div class="entry">2023 — Wedding Art-Market, Berlin</div>
+    <div class="entry">2023 — Teltower Kunst Sonntag, Teltow</div>
+    <div class="entry">2025 — Artist Residency, Centre d’Art, Auroville, India</div>
+    <div class="entry">2026 — UNO Gallery & Paper Positions Art Fair, Berlin</div>
+    <div class="entry">2026 — U8 Haus Group Exhibition, Neukölln, Berlin</div>
+  </section>
 
-<div class="artist-description">
-Philipp Alvaro Klinnert is a Berlin-based interdisciplinary artist working across analog illustration, painting, writing, poetry, and music. His practice explores narrative structures and emotional landscapes through visual and textual mediums.
-</div>
+   <section class="section">
+    <div class="section-title">Publications</div>
+    <div class="entry">2025 - The Hindu https://www.thehindu.com/news/cities/puducherry/german-artists-expo-in-auroville/article69340636.ece</div>
+  </section>
 
-<div class="contact-box">
-  <strong>Contact:</strong><br>
-  <a href="mailto:philippalvaro@outlook.com" rel="noopener noreferrer">philippalvaro@outlook.com</a>
-</div>
+  <div class="artist-description">
+    Philipp Alvaro Klinnert is a Berlin-based interdisciplinary artist working across analog illustration, painting, writing, poetry, and music. His practice explores narrative structures and emotional landscapes through visual and textual mediums.
+  </div>
+
+  <div class="contact-box">
+    <strong>Contact:</strong><br>
+    <a href="mailto:philippalvaro@outlook.com" rel="noopener noreferrer">
+      philippalvaro@outlook.com
+    </a>
+  </div>
 
 </main>
 
-
-<footer class="legal-footer">
-  <button onclick="openPDF('impressum.pdf')">Impressum</button>
-  <button onclick="openPDF('datenschutzerklaerung.pdf')">Datenschutzerklärung</button>
-</footer>
-
-<div id="pdfModal" class="pdf-modal">
-  <div class="pdf-content">
-    <span class="close" onclick="closePDF()">&times;</span>
-    <iframe id="pdfFrame"></iframe>
-  </div>
-</div>
-
+<!-- Load script safely -->
 <script src="script.js" defer></script>
 
 </body>
